@@ -75,6 +75,14 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Bad Request'
   })
 });
+
+app.get('/project', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Project',
+    description: 'First Node JS Project on Heroku'
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
